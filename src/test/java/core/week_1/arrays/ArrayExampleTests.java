@@ -1,4 +1,4 @@
-package arrays;
+package core.week_1.arrays;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

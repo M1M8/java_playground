@@ -1,6 +1,4 @@
-package challenges.fizzbuzz;
-
-import java.util.Arrays;
+package core.week_1.fizzbuzz;
 
 public class FizzBuzz
 {
@@ -9,52 +7,48 @@ public class FizzBuzz
         “Buzz” if an integer is divisible by 5, and “FizzBuzz” if an integer is divisible by both 3 and 5.
      */
 
-    public static Boolean isDivisibleBy(int number, int multiple)
+    private Boolean isDivisibleBy(int number, int multiple)
     {
         return number % multiple == 0;
     }
 
-    public static Boolean isDivisibleBy(int number, int multipleA, int multipleB)
+    private Boolean isDivisibleBy(int number, int multipleA, int multipleB)
     {
         return ((number % multipleA == 0) && (number % multipleB == 0));
     }
 
-    public static void printMessage(int message)
+    private void printMessage(int message)
     {
         System.out.println(message);
     }
 
-    public static void printMessage(String message)
+    private void printMessage(String message)
     {
         System.out.println(message);
     }
 
-    public static void printFizzBuzz(int maxNumber)
+    public void printFizzBuzz(int maxNumber)
     {
-        for(int index = 1; index <= maxNumber; index++)
+        for(int number = 1; number <= maxNumber; number++)
         {
-            if(isDivisibleBy(index, 3, 5))
+            if(isDivisibleBy(number, 3, 5))
             {
                 printMessage("FizzBuzz");
             }
-            else if(isDivisibleBy(index, 5))
+            else if(isDivisibleBy(number, 5))
             {
                 printMessage("Buzz");
             }
-            else if(isDivisibleBy(index, 3))
+            else if(isDivisibleBy(number, 3))
             {
                 printMessage("Fizz");
             }
             else
             {
-                printMessage(index);
+                printMessage(number);
             }
 
         }
     }
 
-    public static void main(String[] args)
-    {
-        printFizzBuzz(1000);
-    }
 }

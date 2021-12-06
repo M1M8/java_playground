@@ -1,4 +1,4 @@
-package arrays;
+package core.week_1.arrays;
 
 public class ArrayExamples
 {
